@@ -7,18 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8067E09B2B7C0C4600B49C62 /* SloperAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8067E09A2B7C0C4600B49C62 /* SloperAppApp.swift */; };
-		8067E09D2B7C0C4600B49C62 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8067E09C2B7C0C4600B49C62 /* ContentView.swift */; };
+		8067E09B2B7C0C4600B49C62 /* SloperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8067E09A2B7C0C4600B49C62 /* SloperApp.swift */; };
+		8067E09D2B7C0C4600B49C62 /* MainListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8067E09C2B7C0C4600B49C62 /* MainListView.swift */; };
 		8067E09F2B7C0C4700B49C62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8067E09E2B7C0C4700B49C62 /* Assets.xcassets */; };
 		8067E0A22B7C0C4700B49C62 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8067E0A12B7C0C4700B49C62 /* Preview Assets.xcassets */; };
+		8067E0AA2B7C0F0700B49C62 /* SloperAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 8067E0A92B7C0F0700B49C62 /* SloperAPI */; };
+		8067E0AD2B7C12F900B49C62 /* TickerListRowData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8067E0AC2B7C12F900B49C62 /* TickerListRowData.swift */; };
+		8067E0B02B7C13AC00B49C62 /* TickerListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8067E0AF2B7C13AC00B49C62 /* TickerListRowView.swift */; };
+		8067E0B32B7C1B7600B49C62 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8067E0B22B7C1B7600B49C62 /* EmptyStateView.swift */; };
+		8067E0B52B7C1C0000B49C62 /* ErrorStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8067E0B42B7C1C0000B49C62 /* ErrorStateView.swift */; };
+		8067E0B72B7C1DEF00B49C62 /* LoadingStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8067E0B62B7C1DEF00B49C62 /* LoadingStateView.swift */; };
+		8067E0BA2B7C203700B49C62 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8067E0B92B7C203700B49C62 /* AppViewModel.swift */; };
+		8067E0BD2B7C210600B49C62 /* Stubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8067E0BC2B7C210600B49C62 /* Stubs.swift */; };
+		8067E0BF2B7C21C000B49C62 /* QuotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8067E0BE2B7C21C000B49C62 /* QuotesViewModel.swift */; };
+		8067E0C12B7C25F100B49C62 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8067E0C02B7C25F100B49C62 /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8067E0972B7C0C4600B49C62 /* SloperApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SloperApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8067E09A2B7C0C4600B49C62 /* SloperAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SloperAppApp.swift; sourceTree = "<group>"; };
-		8067E09C2B7C0C4600B49C62 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8067E09A2B7C0C4600B49C62 /* SloperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SloperApp.swift; sourceTree = "<group>"; };
+		8067E09C2B7C0C4600B49C62 /* MainListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListView.swift; sourceTree = "<group>"; };
 		8067E09E2B7C0C4700B49C62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8067E0A12B7C0C4700B49C62 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8067E0AC2B7C12F900B49C62 /* TickerListRowData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerListRowData.swift; sourceTree = "<group>"; };
+		8067E0AF2B7C13AC00B49C62 /* TickerListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerListRowView.swift; sourceTree = "<group>"; };
+		8067E0B22B7C1B7600B49C62 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
+		8067E0B42B7C1C0000B49C62 /* ErrorStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorStateView.swift; sourceTree = "<group>"; };
+		8067E0B62B7C1DEF00B49C62 /* LoadingStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingStateView.swift; sourceTree = "<group>"; };
+		8067E0B92B7C203700B49C62 /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
+		8067E0BC2B7C210600B49C62 /* Stubs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stubs.swift; sourceTree = "<group>"; };
+		8067E0BE2B7C21C000B49C62 /* QuotesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesViewModel.swift; sourceTree = "<group>"; };
+		8067E0C02B7C25F100B49C62 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8067E0AA2B7C0F0700B49C62 /* SloperAPI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -36,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				8067E0992B7C0C4600B49C62 /* SloperApp */,
+				8067E09E2B7C0C4700B49C62 /* Assets.xcassets */,
 				8067E0982B7C0C4600B49C62 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,10 +72,13 @@
 		8067E0992B7C0C4600B49C62 /* SloperApp */ = {
 			isa = PBXGroup;
 			children = (
-				8067E09A2B7C0C4600B49C62 /* SloperAppApp.swift */,
-				8067E09C2B7C0C4600B49C62 /* ContentView.swift */,
-				8067E09E2B7C0C4700B49C62 /* Assets.xcassets */,
+				8067E09A2B7C0C4600B49C62 /* SloperApp.swift */,
+				8067E0B82B7C1E2900B49C62 /* ViewModels */,
+				8067E0AE2B7C137F00B49C62 /* Views */,
+				8067E0AB2B7C12E200B49C62 /* Models */,
+				8067E0BB2B7C208800B49C62 /* MocksAndStubs */,
 				8067E0A02B7C0C4700B49C62 /* Preview Content */,
+				8067E0C02B7C25F100B49C62 /* Utils.swift */,
 			);
 			path = SloperApp;
 			sourceTree = "<group>";
@@ -65,6 +89,51 @@
 				8067E0A12B7C0C4700B49C62 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8067E0AB2B7C12E200B49C62 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8067E0AC2B7C12F900B49C62 /* TickerListRowData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8067E0AE2B7C137F00B49C62 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8067E09C2B7C0C4600B49C62 /* MainListView.swift */,
+				8067E0B12B7C1B6700B49C62 /* Common */,
+				8067E0AF2B7C13AC00B49C62 /* TickerListRowView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8067E0B12B7C1B6700B49C62 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				8067E0B22B7C1B7600B49C62 /* EmptyStateView.swift */,
+				8067E0B42B7C1C0000B49C62 /* ErrorStateView.swift */,
+				8067E0B62B7C1DEF00B49C62 /* LoadingStateView.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		8067E0B82B7C1E2900B49C62 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				8067E0B92B7C203700B49C62 /* AppViewModel.swift */,
+				8067E0BE2B7C21C000B49C62 /* QuotesViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		8067E0BB2B7C208800B49C62 /* MocksAndStubs */ = {
+			isa = PBXGroup;
+			children = (
+				8067E0BC2B7C210600B49C62 /* Stubs.swift */,
+			);
+			path = MocksAndStubs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +152,9 @@
 			dependencies = (
 			);
 			name = SloperApp;
+			packageProductDependencies = (
+				8067E0A92B7C0F0700B49C62 /* SloperAPI */,
+			);
 			productName = SloperApp;
 			productReference = 8067E0972B7C0C4600B49C62 /* SloperApp.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +183,9 @@
 				Base,
 			);
 			mainGroup = 8067E08E2B7C0C4600B49C62;
+			packageReferences = (
+				8067E0A82B7C0F0700B49C62 /* XCRemoteSwiftPackageReference "swift_backend_sloper" */,
+			);
 			productRefGroup = 8067E0982B7C0C4600B49C62 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +212,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8067E09D2B7C0C4600B49C62 /* ContentView.swift in Sources */,
-				8067E09B2B7C0C4600B49C62 /* SloperAppApp.swift in Sources */,
+				8067E0BD2B7C210600B49C62 /* Stubs.swift in Sources */,
+				8067E0B72B7C1DEF00B49C62 /* LoadingStateView.swift in Sources */,
+				8067E09D2B7C0C4600B49C62 /* MainListView.swift in Sources */,
+				8067E0BF2B7C21C000B49C62 /* QuotesViewModel.swift in Sources */,
+				8067E0BA2B7C203700B49C62 /* AppViewModel.swift in Sources */,
+				8067E09B2B7C0C4600B49C62 /* SloperApp.swift in Sources */,
+				8067E0B32B7C1B7600B49C62 /* EmptyStateView.swift in Sources */,
+				8067E0C12B7C25F100B49C62 /* Utils.swift in Sources */,
+				8067E0B52B7C1C0000B49C62 /* ErrorStateView.swift in Sources */,
+				8067E0AD2B7C12F900B49C62 /* TickerListRowData.swift in Sources */,
+				8067E0B02B7C13AC00B49C62 /* TickerListRowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +426,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8067E0A82B7C0F0700B49C62 /* XCRemoteSwiftPackageReference "swift_backend_sloper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/samuelfr98/swift_backend_sloper";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8067E0A92B7C0F0700B49C62 /* SloperAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8067E0A82B7C0F0700B49C62 /* XCRemoteSwiftPackageReference "swift_backend_sloper" */;
+			productName = SloperAPI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8067E08F2B7C0C4600B49C62 /* Project object */;
 }
