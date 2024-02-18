@@ -11,6 +11,7 @@ import SloperAPI
 struct StockTickerView: View {
     
     @StateObject var quoteVM: TickerQuoteViewModel
+    @State var selectedRange = ChartRange.oneDay
     @Environment(\.dismiss) private var dismiss
       
     
@@ -38,11 +39,46 @@ struct StockTickerView: View {
             
             Divider()
             
+            DateRangePickerView(selectedRange: $selectedRange)
             
+            Divider()
+            
+            Text("Chart View Placeholder")
+                .padding(.horizontal)
+                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, minHeight: 220)
+            
+            Divider().padding([.horizontal, .top])
+            
+            quoteDetailRowView
+                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, minHeight: 80)
             
         }
         .scrollIndicators(.hidden)
         .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
+    }
+    
+    @ViewBuilder
+    private var quoteDetailRowView: some View {
+        
+        switch quoteVM.phase {
+        case .fetching: LoadingStateView()
+        case .failure(let error): ErrorStateView(error: "Quote: \(error.localizedDescription)")
+                .padding(.horizontal)
+        case .success(let quote):
+            ScrollView(.horizontal) {
+                HStack(spacing: 16) {
+                    ForEach(quote.columnItems) {
+                        QuoteDetailRowColumnView(item: $0)
+                    }
+                }
+                .padding(.horizontal)
+                .font(.caption.weight(.semibold))
+                .lineLimit(1)
+            }
+            .scrollIndicators(.hidden)
+            
+        default: EmptyView()
+        }
     }
     
     private var priceDiffRowView: some View {
@@ -143,6 +179,7 @@ struct StockTickerView: View {
                         .foregroundColor(Color(uiColor: .secondaryLabel))
                 }
         }
+        .buttonStyle(.plain)
     }
     
 }

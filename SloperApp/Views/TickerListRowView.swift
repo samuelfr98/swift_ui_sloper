@@ -19,6 +19,7 @@ struct TickerListRowView: View {
                 } label: {
                     image(isSaved: isSaved)
                 }
+                .buttonStyle(.plain)
             }
             
             VStack(alignment: .leading, spacing: 8) {

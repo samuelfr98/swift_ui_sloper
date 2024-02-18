@@ -17,6 +17,7 @@ class AppViewModel: ObservableObject {
             saveTickers()
         }
     }
+    @Published var selectedTicker: Ticker?
     
     var emptyTickersText = "Search and add symbol to see stock quotes"
     var titleText = "Sloper"

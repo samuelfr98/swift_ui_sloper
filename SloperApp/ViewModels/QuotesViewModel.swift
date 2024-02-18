@@ -13,7 +13,7 @@ import SloperAPI
 class QuotesViewModel: ObservableObject {
     
     @Published var quoteDict: [String: Quote] = [:]
-    private let sloperAPI: SloperAPIProtocol
+    let sloperAPI: SloperAPIProtocol
     
     init(sloperAPI: SloperAPIProtocol = SloperAPI()) {
         self.sloperAPI = sloperAPI

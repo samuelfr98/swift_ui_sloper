@@ -8,7 +8,6 @@
 import SwiftUI
 import SloperAPI
 
-@MainActor
 struct SearchView: View {
     
     @EnvironmentObject var appVM: AppViewModel
@@ -32,8 +31,12 @@ struct SearchView: View {
                     )
                 )
             )
-//            .contentShape(Rectangle())
-//            .onTapGesture {  }
+            .contentShape(Rectangle())
+            .onTapGesture { 
+                Task { @MainActor in
+                    appVM.selectedTicker = ticker
+                }
+            }
         }
         .listStyle(.plain)
         .refreshable {
