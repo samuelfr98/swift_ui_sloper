@@ -11,7 +11,6 @@
 		8067E09D2B7C0C4600B49C62 /* MainListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8067E09C2B7C0C4600B49C62 /* MainListView.swift */; };
 		8067E09F2B7C0C4700B49C62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8067E09E2B7C0C4700B49C62 /* Assets.xcassets */; };
 		8067E0A22B7C0C4700B49C62 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8067E0A12B7C0C4700B49C62 /* Preview Assets.xcassets */; };
-		8067E0AA2B7C0F0700B49C62 /* SloperAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 8067E0A92B7C0F0700B49C62 /* SloperAPI */; };
 		8067E0AD2B7C12F900B49C62 /* TickerListRowData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8067E0AC2B7C12F900B49C62 /* TickerListRowData.swift */; };
 		8067E0B02B7C13AC00B49C62 /* TickerListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8067E0AF2B7C13AC00B49C62 /* TickerListRowView.swift */; };
 		8067E0B32B7C1B7600B49C62 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8067E0B22B7C1B7600B49C62 /* EmptyStateView.swift */; };
@@ -21,6 +20,15 @@
 		8067E0BD2B7C210600B49C62 /* Stubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8067E0BC2B7C210600B49C62 /* Stubs.swift */; };
 		8067E0BF2B7C21C000B49C62 /* QuotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8067E0BE2B7C21C000B49C62 /* QuotesViewModel.swift */; };
 		8067E0C12B7C25F100B49C62 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8067E0C02B7C25F100B49C62 /* Utils.swift */; };
+		8067E0C42B7D7F6A00B49C62 /* QuoteExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8067E0C32B7D7F6A00B49C62 /* QuoteExtensions.swift */; };
+		8067E0CD2B804C8A00B49C62 /* SloperAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 8067E0CC2B804C8A00B49C62 /* SloperAPI */; };
+		8067E0CF2B805E4200B49C62 /* FetchPhase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8067E0CE2B805E4200B49C62 /* FetchPhase.swift */; };
+		8067E0D12B805ECF00B49C62 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8067E0D02B805ECF00B49C62 /* SearchViewModel.swift */; };
+		8067E0D32B805F6500B49C62 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8067E0D22B805F6500B49C62 /* SearchView.swift */; };
+		8067E0D62B806D6F00B49C62 /* SloperAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8067E0D52B806D6F00B49C62 /* SloperAPI.swift */; };
+		8067E0D82B81536100B49C62 /* MockSloperAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8067E0D72B81536100B49C62 /* MockSloperAPI.swift */; };
+		8067E0DA2B8181D700B49C62 /* TickerListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8067E0D92B8181D700B49C62 /* TickerListRepository.swift */; };
+		8067E0DC2B81835700B49C62 /* MockTickerListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8067E0DB2B81835700B49C62 /* MockTickerListRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +46,14 @@
 		8067E0BC2B7C210600B49C62 /* Stubs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stubs.swift; sourceTree = "<group>"; };
 		8067E0BE2B7C21C000B49C62 /* QuotesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesViewModel.swift; sourceTree = "<group>"; };
 		8067E0C02B7C25F100B49C62 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		8067E0C32B7D7F6A00B49C62 /* QuoteExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteExtensions.swift; sourceTree = "<group>"; };
+		8067E0CE2B805E4200B49C62 /* FetchPhase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchPhase.swift; sourceTree = "<group>"; };
+		8067E0D02B805ECF00B49C62 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		8067E0D22B805F6500B49C62 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		8067E0D52B806D6F00B49C62 /* SloperAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SloperAPI.swift; sourceTree = "<group>"; };
+		8067E0D72B81536100B49C62 /* MockSloperAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSloperAPI.swift; sourceTree = "<group>"; };
+		8067E0D92B8181D700B49C62 /* TickerListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerListRepository.swift; sourceTree = "<group>"; };
+		8067E0DB2B81835700B49C62 /* MockTickerListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTickerListRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,7 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8067E0AA2B7C0F0700B49C62 /* SloperAPI in Frameworks */,
+				8067E0CD2B804C8A00B49C62 /* SloperAPI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +88,8 @@
 		8067E0992B7C0C4600B49C62 /* SloperApp */ = {
 			isa = PBXGroup;
 			children = (
+				8067E0D42B806D5A00B49C62 /* Services */,
+				8067E0C22B7D7F5000B49C62 /* Extensions */,
 				8067E09A2B7C0C4600B49C62 /* SloperApp.swift */,
 				8067E0B82B7C1E2900B49C62 /* ViewModels */,
 				8067E0AE2B7C137F00B49C62 /* Views */,
@@ -95,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				8067E0AC2B7C12F900B49C62 /* TickerListRowData.swift */,
+				8067E0CE2B805E4200B49C62 /* FetchPhase.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -105,6 +124,7 @@
 				8067E09C2B7C0C4600B49C62 /* MainListView.swift */,
 				8067E0B12B7C1B6700B49C62 /* Common */,
 				8067E0AF2B7C13AC00B49C62 /* TickerListRowView.swift */,
+				8067E0D22B805F6500B49C62 /* SearchView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -124,6 +144,7 @@
 			children = (
 				8067E0B92B7C203700B49C62 /* AppViewModel.swift */,
 				8067E0BE2B7C21C000B49C62 /* QuotesViewModel.swift */,
+				8067E0D02B805ECF00B49C62 /* SearchViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -132,8 +153,27 @@
 			isa = PBXGroup;
 			children = (
 				8067E0BC2B7C210600B49C62 /* Stubs.swift */,
+				8067E0D72B81536100B49C62 /* MockSloperAPI.swift */,
+				8067E0DB2B81835700B49C62 /* MockTickerListRepository.swift */,
 			);
 			path = MocksAndStubs;
+			sourceTree = "<group>";
+		};
+		8067E0C22B7D7F5000B49C62 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8067E0C32B7D7F6A00B49C62 /* QuoteExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8067E0D42B806D5A00B49C62 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8067E0D52B806D6F00B49C62 /* SloperAPI.swift */,
+				8067E0D92B8181D700B49C62 /* TickerListRepository.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,7 +193,7 @@
 			);
 			name = SloperApp;
 			packageProductDependencies = (
-				8067E0A92B7C0F0700B49C62 /* SloperAPI */,
+				8067E0CC2B804C8A00B49C62 /* SloperAPI */,
 			);
 			productName = SloperApp;
 			productReference = 8067E0972B7C0C4600B49C62 /* SloperApp.app */;
@@ -184,7 +224,7 @@
 			);
 			mainGroup = 8067E08E2B7C0C4600B49C62;
 			packageReferences = (
-				8067E0A82B7C0F0700B49C62 /* XCRemoteSwiftPackageReference "swift_backend_sloper" */,
+				8067E0CB2B804C8A00B49C62 /* XCRemoteSwiftPackageReference "swift_backend_sloper" */,
 			);
 			productRefGroup = 8067E0982B7C0C4600B49C62 /* Products */;
 			projectDirPath = "";
@@ -214,14 +254,22 @@
 			files = (
 				8067E0BD2B7C210600B49C62 /* Stubs.swift in Sources */,
 				8067E0B72B7C1DEF00B49C62 /* LoadingStateView.swift in Sources */,
+				8067E0CF2B805E4200B49C62 /* FetchPhase.swift in Sources */,
 				8067E09D2B7C0C4600B49C62 /* MainListView.swift in Sources */,
 				8067E0BF2B7C21C000B49C62 /* QuotesViewModel.swift in Sources */,
 				8067E0BA2B7C203700B49C62 /* AppViewModel.swift in Sources */,
 				8067E09B2B7C0C4600B49C62 /* SloperApp.swift in Sources */,
+				8067E0DA2B8181D700B49C62 /* TickerListRepository.swift in Sources */,
 				8067E0B32B7C1B7600B49C62 /* EmptyStateView.swift in Sources */,
+				8067E0D82B81536100B49C62 /* MockSloperAPI.swift in Sources */,
+				8067E0D12B805ECF00B49C62 /* SearchViewModel.swift in Sources */,
+				8067E0D62B806D6F00B49C62 /* SloperAPI.swift in Sources */,
 				8067E0C12B7C25F100B49C62 /* Utils.swift in Sources */,
+				8067E0D32B805F6500B49C62 /* SearchView.swift in Sources */,
+				8067E0DC2B81835700B49C62 /* MockTickerListRepository.swift in Sources */,
 				8067E0B52B7C1C0000B49C62 /* ErrorStateView.swift in Sources */,
 				8067E0AD2B7C12F900B49C62 /* TickerListRowData.swift in Sources */,
+				8067E0C42B7D7F6A00B49C62 /* QuoteExtensions.swift in Sources */,
 				8067E0B02B7C13AC00B49C62 /* TickerListRowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,7 +476,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		8067E0A82B7C0F0700B49C62 /* XCRemoteSwiftPackageReference "swift_backend_sloper" */ = {
+		8067E0CB2B804C8A00B49C62 /* XCRemoteSwiftPackageReference "swift_backend_sloper" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/samuelfr98/swift_backend_sloper";
 			requirement = {
@@ -439,9 +487,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		8067E0A92B7C0F0700B49C62 /* SloperAPI */ = {
+		8067E0CC2B804C8A00B49C62 /* SloperAPI */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 8067E0A82B7C0F0700B49C62 /* XCRemoteSwiftPackageReference "swift_backend_sloper" */;
+			package = 8067E0CB2B804C8A00B49C62 /* XCRemoteSwiftPackageReference "swift_backend_sloper" */;
 			productName = SloperAPI;
 		};
 /* End XCSwiftPackageProductDependency section */

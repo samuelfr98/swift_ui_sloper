@@ -7,7 +7,7 @@
 
 import Foundation
 
-typealias PriceChange = (price: String, cahnge: String)
+typealias PriceChange = (price: String, change: String)
 
 struct TickerListRowData {
     
@@ -20,12 +20,5 @@ struct TickerListRowData {
     let name: String?
     let price: PriceChange?
     let type: RowType
-    
-    init(symbol: String, name: String?, price: PriceChange?, type: RowType) {
-        self.symbol = symbol
-        self.name = name
-        self.price = price
-        self.type = type
-    }
     
 }

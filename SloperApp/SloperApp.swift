@@ -9,10 +9,15 @@ import SwiftUI
 
 @main
 struct SloperApp: App {
+    
+    @StateObject var appVM = AppViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            MainListView()
-                
+            NavigationStack {
+                MainListView()
+            }        
+            .environmentObject(appVM)
         }
     }
 }

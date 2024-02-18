@@ -9,13 +9,17 @@ import SwiftUI
 
 struct LoadingStateView: View {
     var body: some View {
-        Spacer()
-        ProgressView()
-            .progressViewStyle(.circular)
-        Spacer()
+       HStack {
+           Spacer()
+           ProgressView()
+               .progressViewStyle(.circular)
+           Spacer()
+       }
     }
 }
 
-#Preview {
-    LoadingStateView()
+struct LoadingStateView_Previews: PreviewProvider {
+    static var previews: some View {
+        LoadingStateView()
+    }
 }

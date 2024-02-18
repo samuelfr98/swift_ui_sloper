@@ -25,6 +25,8 @@ struct EmptyStateView: View {
     }
 }
 
-#Preview {
-    EmptyStateView(text: "No data available")
+struct EmptyStateView_Previews: PreviewProvider {
+    static var previews: some View {
+        EmptyStateView(text: "No data available")
+    }
 }
