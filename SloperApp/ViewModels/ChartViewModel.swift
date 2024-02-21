@@ -40,6 +40,28 @@ class ChartViewModel: ObservableObject {
         (selectedX != nil) ? .cyan : (chart?.lineColor ?? .cyan)
     }
     
+    private let selectedValueDateFormatter = {
+        let df = DateFormatter()
+        df.dateStyle = .medium
+        return df
+    }()
+    
+    var selectedXDateText: String {
+        guard let selectedX = selectedX as? Date, let chart else { return "" }
+        if selectedRange == .oneDay || selectedRange == .oneWeek {
+            selectedValueDateFormatter.timeStyle = .short
+        } else {
+            selectedValueDateFormatter.timeStyle = .none
+        }
+        let index = DateBins(thresholds: chart.items.map { $0.timestamp }).index(for: selectedX)
+        let item = chart.items[index]
+        
+        return selectedValueDateFormatter.string(from: item.timestamp)
+    }
+    
+    var selectedXOpacity: Double {
+        selectedX == nil ? 1 : 0
+    }
     
     init(ticker: Ticker, apiService: SloperAPIProtocol = SloperAPI()) {
         self.ticker = ticker
