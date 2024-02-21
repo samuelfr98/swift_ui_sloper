@@ -22,5 +22,11 @@ struct MockSloperAPI: SloperAPIProtocol {
         try await stubbedFetchQuotesCallback()
     }
     
+    var stubbedFetchChartDataCallback: ((ChartRange) async throws -> ChartData?)! = { $0.stubs }
+    func fetchChartReponse(ticker: String, range: ChartRange) async throws -> ChartData? {
+        return try await stubbedFetchChartDataCallback(range)
+    }
+
+    
 }
 #endif

@@ -26,7 +26,7 @@ struct MainListView: View {
             .searchable(text: $searchVM.query)
             .refreshable { await quotesVM.fetchQuotes(tickers: appVM.tickers ) }
             .sheet(item: $appVM.selectedTicker) {
-                StockTickerView(quoteVM: .init(ticker: $0, sloperAPI: quotesVM.sloperAPI))
+                StockTickerView(chartVM: ChartViewModel(ticker: $0, apiService: quotesVM.sloperAPI), quoteVM: .init(ticker: $0, sloperAPI: quotesVM.sloperAPI))
                     .presentationDetents([.height(560)])
             }
             .task(id: appVM.tickers) { await quotesVM.fetchQuotes(tickers: appVM.tickers) }

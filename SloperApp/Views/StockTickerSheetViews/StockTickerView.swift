@@ -10,8 +10,8 @@ import SloperAPI
 
 struct StockTickerView: View {
     
+    @StateObject var chartVM: ChartViewModel
     @StateObject var quoteVM: TickerQuoteViewModel
-    @State var selectedRange = ChartRange.oneDay
     @Environment(\.dismiss) private var dismiss
       
     
@@ -27,7 +27,12 @@ struct StockTickerView: View {
         }
         .padding(.top)
         .background(Color(uiColor: .systemBackground))
-        .task { await quoteVM.fetchQuote() }
+        .task(id: chartVM.selectedRange.rawValue) {
+            if quoteVM.quote == nil {
+                await quoteVM.fetchQuote()
+            }
+            await chartVM.fetchData()
+        }
     }
     
     private var scrollView: some View {
@@ -39,11 +44,11 @@ struct StockTickerView: View {
             
             Divider()
             
-            DateRangePickerView(selectedRange: $selectedRange)
+            DateRangePickerView(selectedRange: $chartVM.selectedRange)
             
             Divider()
             
-            Text("Chart View Placeholder")
+            chartView
                 .padding(.horizontal)
                 .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, minHeight: 220)
             
@@ -55,6 +60,18 @@ struct StockTickerView: View {
         }
         .scrollIndicators(.hidden)
         .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
+    }
+    
+    @ViewBuilder
+    private var chartView: some View {
+        switch chartVM.fetchPhase {
+            case .fetching: LoadingStateView()
+            case .success(let data):
+                ChartView(data: data, vm: chartVM)
+            case .failure(let error):
+                ErrorStateView(error: "Chart: \(error.localizedDescription)")
+            default: EmptyView()
+        }
     }
     
     @ViewBuilder
@@ -220,19 +237,23 @@ struct StockTickerView_Previews: PreviewProvider {
         return TickerQuoteViewModel(ticker: .stub, sloperAPI: mockAPI)
     }()
     
+    static var chartVM: ChartViewModel {
+        ChartViewModel(ticker: .stub, apiService: MockSloperAPI())
+    }
+    
     static var previews: some View {
         
         Group {
-            StockTickerView(quoteVM: tradingStubsQuoteViewModel)
+            StockTickerView(chartVM: chartVM, quoteVM: tradingStubsQuoteViewModel)
                 .previewDisplayName("Trading")
                 .frame(height: 700)
-            StockTickerView(quoteVM: closedStubsQuoteViewModel)
+            StockTickerView(chartVM: chartVM,quoteVM: closedStubsQuoteViewModel)
                 .previewDisplayName("Closed")
                 .frame(height: 700)
-            StockTickerView(quoteVM: loadingStubsQuoteViewModel)
+            StockTickerView(chartVM: chartVM,quoteVM: loadingStubsQuoteViewModel)
                 .previewDisplayName("Loading")
                 .frame(height: 700)
-            StockTickerView(quoteVM: errorStubsQuoteViewModel)
+            StockTickerView(chartVM: chartVM,quoteVM: errorStubsQuoteViewModel)
                 .previewDisplayName("Error")
                 .frame(height: 700)
         }.previewLayout(.sizeThatFits)

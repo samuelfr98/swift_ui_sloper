@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		805A4CDF2B82B5F900FEEFDB /* ChartViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805A4CDE2B82B5F900FEEFDB /* ChartViewData.swift */; };
+		805A4CE12B82B67000FEEFDB /* ChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805A4CE02B82B67000FEEFDB /* ChartViewModel.swift */; };
+		805A4CE32B82BFF700FEEFDB /* ChartStubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805A4CE22B82BFF700FEEFDB /* ChartStubs.swift */; };
+		805A4CE52B82DBD600FEEFDB /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805A4CE42B82DBD600FEEFDB /* ChartView.swift */; };
 		8067E09B2B7C0C4600B49C62 /* SloperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8067E09A2B7C0C4600B49C62 /* SloperApp.swift */; };
 		8067E09D2B7C0C4600B49C62 /* MainListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8067E09C2B7C0C4600B49C62 /* MainListView.swift */; };
 		8067E09F2B7C0C4700B49C62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8067E09E2B7C0C4700B49C62 /* Assets.xcassets */; };
@@ -38,6 +42,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		805A4CDE2B82B5F900FEEFDB /* ChartViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewData.swift; sourceTree = "<group>"; };
+		805A4CE02B82B67000FEEFDB /* ChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewModel.swift; sourceTree = "<group>"; };
+		805A4CE22B82BFF700FEEFDB /* ChartStubs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartStubs.swift; sourceTree = "<group>"; };
+		805A4CE42B82DBD600FEEFDB /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 		8067E0972B7C0C4600B49C62 /* SloperApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SloperApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8067E09A2B7C0C4600B49C62 /* SloperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SloperApp.swift; sourceTree = "<group>"; };
 		8067E09C2B7C0C4600B49C62 /* MainListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListView.swift; sourceTree = "<group>"; };
@@ -126,6 +134,7 @@
 			children = (
 				8067E0AC2B7C12F900B49C62 /* TickerListRowData.swift */,
 				8067E0CE2B805E4200B49C62 /* FetchPhase.swift */,
+				805A4CDE2B82B5F900FEEFDB /* ChartViewData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -159,6 +168,7 @@
 				8067E0BE2B7C21C000B49C62 /* QuotesViewModel.swift */,
 				8067E0D02B805ECF00B49C62 /* SearchViewModel.swift */,
 				808CB8852B81A0280064A307 /* TickerQuoteViewModel.swift */,
+				805A4CE02B82B67000FEEFDB /* ChartViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -169,6 +179,7 @@
 				8067E0BC2B7C210600B49C62 /* Stubs.swift */,
 				8067E0D72B81536100B49C62 /* MockSloperAPI.swift */,
 				8067E0DB2B81835700B49C62 /* MockTickerListRepository.swift */,
+				805A4CE22B82BFF700FEEFDB /* ChartStubs.swift */,
 			);
 			path = MocksAndStubs;
 			sourceTree = "<group>";
@@ -198,6 +209,7 @@
 				808CB87D2B819F6C0064A307 /* StockTickerView.swift */,
 				808CB8872B81DD260064A307 /* DateRangePickerView.swift */,
 				808CB88B2B81E17D0064A307 /* QuoteDetailRowColumnView.swift */,
+				805A4CE42B82DBD600FEEFDB /* ChartView.swift */,
 			);
 			path = StockTickerSheetViews;
 			sourceTree = "<group>";
@@ -284,9 +296,12 @@
 				8067E0CF2B805E4200B49C62 /* FetchPhase.swift in Sources */,
 				8067E09D2B7C0C4600B49C62 /* MainListView.swift in Sources */,
 				8067E0BF2B7C21C000B49C62 /* QuotesViewModel.swift in Sources */,
+				805A4CE52B82DBD600FEEFDB /* ChartView.swift in Sources */,
+				805A4CE12B82B67000FEEFDB /* ChartViewModel.swift in Sources */,
 				808CB8862B81A0280064A307 /* TickerQuoteViewModel.swift in Sources */,
 				8067E0BA2B7C203700B49C62 /* AppViewModel.swift in Sources */,
 				8067E09B2B7C0C4600B49C62 /* SloperApp.swift in Sources */,
+				805A4CE32B82BFF700FEEFDB /* ChartStubs.swift in Sources */,
 				8067E0DA2B8181D700B49C62 /* TickerListRepository.swift in Sources */,
 				808CB8882B81DD260064A307 /* DateRangePickerView.swift in Sources */,
 				8067E0B32B7C1B7600B49C62 /* EmptyStateView.swift in Sources */,
@@ -297,6 +312,7 @@
 				8067E0C12B7C25F100B49C62 /* Utils.swift in Sources */,
 				8067E0D32B805F6500B49C62 /* SearchView.swift in Sources */,
 				8067E0DC2B81835700B49C62 /* MockTickerListRepository.swift in Sources */,
+				805A4CDF2B82B5F900FEEFDB /* ChartViewData.swift in Sources */,
 				808CB88C2B81E17D0064A307 /* QuoteDetailRowColumnView.swift in Sources */,
 				8067E0B52B7C1C0000B49C62 /* ErrorStateView.swift in Sources */,
 				808CB88E2B81E5CE0064A307 /* FoundationExtensions.swift in Sources */,
