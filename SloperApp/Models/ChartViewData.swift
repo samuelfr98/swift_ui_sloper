@@ -10,7 +10,7 @@ import SloperAPI
 import SwiftUI
 
 struct ChartViewData: Identifiable {
-    
+           
     let id = UUID()
     let yAxisData: ChartAxisData
     let items: [ChartViewItem]

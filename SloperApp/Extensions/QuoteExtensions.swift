@@ -76,8 +76,12 @@ extension Quote {
         averageVolume?.formatUsingAbbrevation() ?? "-"
     }
     
-    var yieldText: String { "-" }
-    var betaText: String { "-" }
+    var yieldText: String {
+        yield != nil ? "\(yield!*100)%" : "-"
+    }
+    var betaText: String {
+        Utils.format(value: beta) ?? "-"
+    }
     
     var epsText: String {
         Utils.format(value: trailingEps) ?? "-"
