@@ -12,6 +12,7 @@ import SwiftUI
 struct ChartViewData: Identifiable {
            
     let id = UUID()
+    let xAxisData: ChartAxisData
     let yAxisData: ChartAxisData
     let items: [ChartViewItem]
     let lineColor: Color
@@ -31,5 +32,7 @@ struct ChartAxisData {
     
     let axisStart: Double
     let axisEnd: Double
+    let strideBy: Double
+    let map: [String: String]
     
 }

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SloperAPI
 
 // Abbreviates large numerical values
 extension Double {
@@ -78,6 +79,29 @@ extension Int {
         
         return numFormatter.string(from: NSNumber (value:value))!
     }
-
     
+}
+
+extension Double {
+    var roundedString: String {
+        String(format: "%.2f", self)
+    }
+}
+
+extension Date {
+    func dateComponents(timezone: TimeZone, rangeType: ChartRange, calendar: Calendar = .current) -> DateComponents {
+        let current = calendar.dateComponents(in: timezone, from: self)
+        
+        var dc = DateComponents(timeZone: timezone, year: current.year, month: current.month)
+        
+        if rangeType == .oneMonth || rangeType == .oneWeek || rangeType == .oneDay {
+            dc.day = current.day
+        }
+        
+        if rangeType == .oneDay {
+            dc.hour = current.hour
+        }
+        
+        return dc
+    }
 }

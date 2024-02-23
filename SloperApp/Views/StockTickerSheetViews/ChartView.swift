@@ -16,10 +16,10 @@ struct ChartView: View {
     
     var body: some View {
         chart
-            .chartXScale(domain: data.items.first!.timestamp...data.items.last!.timestamp)
-            .chartYScale(domain:
-                            data.yAxisData.axisStart...data.yAxisData.axisEnd
-            )
+            .chartXAxis { chartXAxis }
+            .chartXScale(domain: data.xAxisData.axisStart...data.xAxisData.axisEnd)
+            .chartYAxis { chartYAxis }
+            .chartYScale(domain: data.yAxisData.axisStart...data.yAxisData.axisEnd)
             .chartPlotStyle { chartPlotStyle($0) }
             .chartOverlay { proxy in
                 GeometryReader { gProxy in
@@ -40,16 +40,16 @@ struct ChartView: View {
     
     private var chart: some View {
         Chart {
-            ForEach(data.items) {
+            ForEach(Array(zip(data.items.indices, data.items)), id: \.0) { index, item in
                 LineMark(
-                    x: .value("Time", $0.timestamp),
-                    y: .value("Price", $0.value))
+                    x: .value("Time", index),
+                    y: .value("Price", item.value))
                 .foregroundStyle(vm.foregroundMarkColor)
                 
                 AreaMark(
-                        x: .value("Time", $0.timestamp),
+                        x: .value("Time", index),
                         yStart: .value("Min", data.yAxisData.axisStart),
-                        yEnd: .value("Max", $0.value)
+                        yEnd: .value("Max", item.value)
                 )
                 .foregroundStyle(LinearGradient(
                     gradient: Gradient(
@@ -78,6 +78,36 @@ struct ChartView: View {
         }
     }
     
+    private var chartXAxis: some AxisContent {
+        AxisMarks(values: .stride(by: data.xAxisData.strideBy)) {
+            value in
+            if let text = data.xAxisData.map[String(value.index)] {
+                AxisGridLine(stroke: .init(lineWidth: 0.3))
+                AxisTick(stroke: .init(lineWidth:0.3))
+                AxisValueLabel(collisionResolution: .greedy()) {
+                    Text(text)
+                        .foregroundColor(Color(uiColor: .label))
+                        .font(.caption.bold())
+                }
+            }
+        }
+    }
+    
+    private var chartYAxis: some AxisContent {
+        AxisMarks(preset: .extended, values: .stride(by: data.yAxisData.strideBy)) { value in
+            if let y = value.as(Double.self),
+               let text = data.yAxisData.map[y.roundedString] {
+                AxisGridLine(stroke: .init(lineWidth: 0.3))
+                AxisTick(stroke: .init(lineWidth: 0.3))
+                AxisValueLabel(anchor: .topLeading, collisionResolution: .greedy) {
+                    Text(text)
+                        .foregroundColor(Color(uiColor: .label))
+                        .font(.caption.bold())
+                }
+            }
+        }
+    }
+    
     private func chartPlotStyle (_ plotContent: ChartPlotContent) -> some View {
         plotContent
             .frame(height: 200)
@@ -101,11 +131,10 @@ struct ChartView: View {
     private func onChangeDrag(value: DragGesture.Value, chartProxy: ChartProxy, geometryProxy: GeometryProxy) {
         let xCurrent = value.location.x - geometryProxy[chartProxy.plotAreaFrame].origin.x
         
-        if let timestamp: Date = chartProxy.value(atX: xCurrent),
-            let startDate = data.items.first?.timestamp,
-            let endDate = data.items.last?.timestamp,
-            timestamp >= startDate && timestamp <= endDate {
-            vm.selectedX = timestamp
+        if let index: Double = chartProxy.value(atX: xCurrent),
+           index >= 0,
+           Int(index) <= data.items.count - 1 {
+            self.vm.selectedX = Int(index)
         }
     }
     
@@ -128,8 +157,8 @@ struct ChartView_Previews: PreviewProvider {
         var mockSloperAPI = MockSloperAPI()
         mockSloperAPI.stubbedFetchChartDataCallback = { _ in stub }
         let chartVM = ChartViewModel(ticker: .stub, apiService: mockSloperAPI)
+        chartVM.selectedRange = range
         return chartVM
-        
     }
 }
 
